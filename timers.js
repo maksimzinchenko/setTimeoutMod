@@ -8,7 +8,8 @@ const timerManager = {
     clearTimeout: function (timerId) {
         let index = this.timersIDArray.indexOf(timerId);
         if (index > -1) {
-            this.timersIDArray.splice(index, 1)
+            this.timersIDArray.splice(index, 1);
+            clearTimeout(index);
         }
     },
     clearAllTimeout: function () {
